@@ -8,9 +8,9 @@
 
 <a href="/"> Show My Messages </a><br />
 Id : <span th:number="${message.id}" ></span><br />
-Task Name : <span th:text="${message.content}" ></span><br />
-Due Date : <p th:number="${message.postedDate}" ></p>
-Priority :<span th:text="${message.sentBy}" ></span><br />
+Content : <span th:text="${message.content}" ></span><br />
+Posted Date : <p th:number="${message.postedDate}" ></p>
+Sent By :<span th:text="${message.sentBy}" ></span><br />
 <a th:href="@{/delete/{id} (id=${message.id})}" >Delete this Message from the list</a>
 
 </body>

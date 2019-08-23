@@ -17,7 +17,7 @@ public class Message
     private long id;
 
     @NotNull
-    @Size(min=4)
+    @Size(min=10)
     private String content;
 
     @NotNull
@@ -25,7 +25,7 @@ public class Message
     private int postedDate;
 
     @NotNull
-    @Size(min=10)
+    @Size(min=2)
     private String sentBy;
 
 

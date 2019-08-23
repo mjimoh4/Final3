@@ -18,7 +18,7 @@
       th:action="@{/process}"
       th:object="${message}"
       method="post">
-    Id : <input type="number" th:field="*{id}" />
+    <input type="number" th:field="*{id}" />
     <!--<span th:if="${#fields.hasErrors('id')}"
           th:errors="*{id}"></span><br /> -->
 

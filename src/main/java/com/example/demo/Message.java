@@ -17,11 +17,10 @@ public class Message
     private long id;
 
     @NotNull
-    @Size(min=10)
+    @Size(min=10, max=100)
     private String content;
 
-    @NotNull
-    @Min(3)
+
     private int postedDate;
 
     @NotNull

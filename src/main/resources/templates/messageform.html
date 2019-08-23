@@ -17,8 +17,11 @@
 <form action="#"
       th:action="@{/process}"
       th:object="${message}"
-      method="post">
-    <input type="number" th:field="*{id}" />
+      method="post"
+      enctype="multipart/form-data">
+
+
+    <input type="hidden" th:field="*{id}" />
     <!--<span th:if="${#fields.hasErrors('id')}"
           th:errors="*{id}"></span><br /> -->
 
@@ -26,7 +29,8 @@
     <span th:if="${#fields.hasErrors('content')}"
           th:errors="*{content}"></span><br />
 
-    Posted Date :<input type="number" th:field="*{postedDate}" />
+    Posted Date :<input type="date" th:field="*{postedDate}" />
+
     <span th:if="${#fields.hasErrors('postedDate')}"
           th:errors="*{postedDate}"></span><br />
 
@@ -34,6 +38,7 @@
     Sent By  :<input type="text" th:field="*{sentBy}" />
     <span th:if="${#fields.hasErrors('sentBy')}"
           th:errors="*{sentBy}"></span><br />
+    <input type="file" name="file" />
 
 
     <br />

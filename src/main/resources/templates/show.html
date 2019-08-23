@@ -13,12 +13,17 @@
     <title>Title</title>
 </head>
 <body>
-
+<div >
 <a href="/"> Show My Messages </a><br />
 <span th:number="${message.id}" ></span><br />
-Content : <span th:text="${message.content}" ></span><br />
-Posted Date : <p th:number="${message.postedDate}" ></p>
-Sent By :<span th:text="${message.sentBy}" ></span><br />
+Content : <span><p th:text="${message.content}" ></p></span>
+Posted Date : <span th:text="${message.postedDate}" ></span><br />
+Sent By :<span th:text="${message.sentBy}" ></span>
+</div>
+
+<div th:if="${message.image} != null">
+    <img th:src="${message.image}" />
+</div>
 <a th:href="@{/delete/{id} (id=${message.id})}" >Delete this Message from the list</a>
 
 </body>
